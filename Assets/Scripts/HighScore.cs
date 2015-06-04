@@ -7,6 +7,12 @@ namespace NCMB
 	{
 		public int score   { get; set; }
 		public string name { get; private set; }
+
+		public string print()
+		{
+			return name + ' ' + score;
+		}
+
 		
 		// コンストラクタ -----------------------------------
 		public HighScore(int _score, string _name)
