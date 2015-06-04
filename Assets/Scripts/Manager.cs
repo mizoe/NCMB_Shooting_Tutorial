@@ -23,6 +23,15 @@ public class Manager : MonoBehaviour
 	{
 		if( !IsPlaying() ){
 			drawButton();
+
+			// コメントボタンが押されたら
+			if ( commentButton ){
+				Application.LoadLevel("Comment");
+			}
+
+			if(leaderBoardButton){
+				Application.LoadLevel("LeaderBoard");
+			}
 			
 			// ログアウトボタンが押されたら
 			if( logOutButton )
@@ -47,6 +56,9 @@ public class Manager : MonoBehaviour
 	
 	public void GameOver ()
 	{
+		PlayerPrefs.SetInt("lastWave", FindObjectOfType<Emitter>().currentWave);
+		PlayerPrefs.Save ();
+
 		FindObjectOfType<Score> ().Save ();
 		// ゲームオーバー時に、タイトルを表示する
 		title.SetActive (true);
