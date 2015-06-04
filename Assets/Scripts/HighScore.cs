@@ -14,7 +14,12 @@ namespace NCMB
 			score = _score;
 			name  = _name;
 		}
-		
+
+		public string print()
+		{
+			return name + ' ' + score;
+		}
+
 		// サーバーにハイスコアを保存 -------------------------
 		public void save()
 		{
