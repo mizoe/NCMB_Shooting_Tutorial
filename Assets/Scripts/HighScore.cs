@@ -57,6 +57,9 @@ namespace NCMB
 				}
 			});
 		}
-		
+		public string print()
+		{
+			return name + ' ' + score;
+		}
 	}
 } 
