@@ -5,6 +5,13 @@ namespace NCMB
 {
 	public class HighScore
 	{
+
+		// ランキングで表示するために文字列を整形 -----------
+		public string print()
+		{
+			return name + ' ' + score;
+		} 
+
 		public int score   { get; set; }
 		public string name { get; private set; }
 		

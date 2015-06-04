@@ -7,7 +7,8 @@ public class Emitter : MonoBehaviour
 	public GameObject[] waves;
 	
 	// 現在のWave
-	private int currentWave;
+	// privateからpublicに変更し、ゲッターを設定
+	public int currentWave { get; private set; } 
 	
 	// Managerコンポーネント
 	private Manager manager;
